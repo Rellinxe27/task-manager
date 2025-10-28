@@ -1,0 +1,100 @@
+### Task Manager API - REST Client Tests
+### Use with REST Client extension in VS Code
+
+### Variables
+@baseUrl_local = http://localhost:3000
+@baseUrl_render = https://your-app-name.onrender.com
+@contentType = application/json
+
+### Use local for development
+@baseUrl = {{baseUrl_local}}
+
+### Uncomment line below to test production on Render
+# @baseUrl = {{baseUrl_render}}
+
+###############################################
+### ROOT ENDPOINT
+###############################################
+
+### Get API Info
+GET {{baseUrl}}/
+Content-Type: {{contentType}}
+
+###############################################
+### GET REQUESTS
+###############################################
+
+### Get all tasks
+GET {{baseUrl}}/api/tasks
+Content-Type: {{contentType}}
+
+### Get task by ID (replace with actual task ID)
+GET {{baseUrl}}/api/tasks/507f1f77bcf86cd799439011
+Content-Type: {{contentType}}
+
+###############################################
+### POST REQUESTS
+###############################################
+
+### Create new task
+POST {{baseUrl}}/api/tasks
+Content-Type: {{contentType}}
+
+{
+  "title": "Complete assignment",
+  "description": "Finish the task manager API project",
+  "status": "pending",
+  "dueDate": "2025-11-15"
+}
+
+### Create another task
+POST {{baseUrl}}/api/tasks
+Content-Type: {{contentType}}
+
+{
+  "title": "Study for exam",
+  "description": "Review all course materials",
+  "status": "in-progress",
+  "dueDate": "2025-11-20"
+}
+
+###############################################
+### PUT REQUESTS
+###############################################
+
+### Update task status (replace with actual task ID)
+PUT {{baseUrl}}/api/tasks/507f1f77bcf86cd799439011
+Content-Type: {{contentType}}
+
+{
+  "status": "completed"
+}
+
+### Update task completely (replace with actual task ID)
+PUT {{baseUrl}}/api/tasks/507f1f77bcf86cd799439011
+Content-Type: {{contentType}}
+
+{
+  "title": "Complete assignment - UPDATED",
+  "description": "Finish the task manager API project with documentation",
+  "status": "in-progress",
+  "dueDate": "2025-11-16"
+}
+
+###############################################
+### DELETE REQUESTS
+###############################################
+
+### Delete task (replace with actual task ID)
+DELETE {{baseUrl}}/api/tasks/507f1f77bcf86cd799439011
+Content-Type: {{contentType}}
+
+###############################################
+### TESTING DIFFERENT ENVIRONMENTS
+###############################################
+
+### Test localhost
+GET http://localhost:3000/api/tasks
+
+### Test Render (update URL after deployment)
+GET https://your-app-name.onrender.com/api/tasks
