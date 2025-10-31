@@ -1,15 +1,14 @@
 ### Task Manager API - REST Client Tests
-### Use with REST Client extension in VS Code
 
 ### Variables
 @baseUrl_local = http://localhost:3000
 @baseUrl_render =https://task-manager-cse341-fall2025-week05.onrender.com
 @contentType = application/json
 
-### line to test local for development
+### test local for development
 # @baseUrl = {{baseUrl_local}}
 
-### line below to test production on Render
+### test production on Render
 @baseUrl = {{baseUrl_render}}
 
 ###############################################
@@ -28,8 +27,8 @@ Content-Type: {{contentType}}
 GET {{baseUrl}}/api/tasks
 Content-Type: {{contentType}}
 
-### Get task by ID (replace with actual task ID)
-GET {{baseUrl}}/api/tasks/507f1f77bcf86cd799439011
+### Get task by ID
+GET {{baseUrl}}/api/tasks/6903fcfd155a968113d9358b
 Content-Type: {{contentType}}
 
 ###############################################
@@ -63,7 +62,7 @@ Content-Type: {{contentType}}
 ###############################################
 
 ### Update task status
-PUT {{baseUrl}}/api/tasks/507f1f77bcf86cd799439011
+PUT {{baseUrl}}/api/tasks/69014f5bf5735940c26ab621
 Content-Type: {{contentType}}
 
 {
