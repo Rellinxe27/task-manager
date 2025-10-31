@@ -3,14 +3,14 @@
 
 ### Variables
 @baseUrl_local = http://localhost:3000
-@baseUrl_render = https://your-app-name.onrender.com
+@baseUrl_render =https://task-manager-cse341-fall2025-week05.onrender.com
 @contentType = application/json
 
-### Use local for development
-@baseUrl = {{baseUrl_local}}
+### line to test local for development
+# @baseUrl = {{baseUrl_local}}
 
-### Uncomment line below to test production on Render
-# @baseUrl = {{baseUrl_render}}
+### line below to test production on Render
+@baseUrl = {{baseUrl_render}}
 
 ###############################################
 ### ROOT ENDPOINT
@@ -62,7 +62,7 @@ Content-Type: {{contentType}}
 ### PUT REQUESTS
 ###############################################
 
-### Update task status (replace with actual task ID)
+### Update task status
 PUT {{baseUrl}}/api/tasks/507f1f77bcf86cd799439011
 Content-Type: {{contentType}}
 
@@ -70,7 +70,7 @@ Content-Type: {{contentType}}
   "status": "completed"
 }
 
-### Update task completely (replace with actual task ID)
+### Update task completely
 PUT {{baseUrl}}/api/tasks/507f1f77bcf86cd799439011
 Content-Type: {{contentType}}
 
@@ -85,7 +85,7 @@ Content-Type: {{contentType}}
 ### DELETE REQUESTS
 ###############################################
 
-### Delete task (replace with actual task ID)
+### Delete task
 DELETE {{baseUrl}}/api/tasks/507f1f77bcf86cd799439011
 Content-Type: {{contentType}}
 
@@ -96,5 +96,5 @@ Content-Type: {{contentType}}
 ### Test localhost
 GET http://localhost:3000/api/tasks
 
-### Test Render (update URL after deployment)
-GET https://your-app-name.onrender.com/api/tasks
+### Test Render
+GET {{baseUrl}}/api/tasks
