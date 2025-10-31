@@ -30,7 +30,11 @@ const swaggerOptions = {
                 description: 'Development server'
             },
             {
-                url: 'https://asdegftask-manager-cse341-fall2025-week05.onrender.com',
+                url: 'http://localhost:8080',
+                description: 'test server'
+            },
+            {
+                url: 'https://task-manager-cse341-fall2025-week05.onrender.com',
                 description: 'Production server'
             }
         ]

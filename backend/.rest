@@ -3,7 +3,7 @@
 
 ### Variables
 @baseUrl_local = http://localhost:3000
-@baseUrl_render =httpssssss://task-manager-cse341-fall2025-week05.onrender.com
+@baseUrl_render =https://task-manager-cse341-fall2025-week05.onrender.com
 @contentType = application/json
 
 ### line to test local for development
